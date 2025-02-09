@@ -32,7 +32,7 @@
         circle(width/2,height/2,diametro-200);
 
         fill(0,255,0);
-        circle(width/2,height/2,diametro)-240;
+        circle(width/2,height/2,diametro-240);
 
         fill(0,0,255);
         circle(width/2,height/2,diametro-280);
@@ -48,7 +48,16 @@
         }
 
         function mouseClicked(){
-            console.log (mouseX);
+            let centroX= width/2
+            let centroY= height/2
+            let distanza=dist(centroX,centroY,mouseX,mouseY);
+            console.log(distanza)
+            if(distanza<=200){
+                alert("dentro")
+            }
+            else{
+                alert("fuori")
+            }
         }
     </script>
 </body>
